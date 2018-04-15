@@ -7,7 +7,7 @@ server:
 #设置数据库连接信息
 spring:
   datasource:
-    name: root
+    username: root
     password: 2597
     url: jdbc:mysql://localhost:3306/test
     driver-class-name: com.mysql.jdbc.Driver
@@ -17,4 +17,9 @@ spring:
     active: dev
 
 # 查看当前项目中已启用和未启用的自动配置的报告。
-#debug: true
+debug: true
+
+#AutoConfigure试验
+hello:
+  msg:wuqingyi
+
