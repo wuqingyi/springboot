@@ -1,0 +1,4 @@
+#类型安全的配置（基于properties） 练习
+author:
+  name:Jack
+  age:20

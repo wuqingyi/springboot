@@ -19,6 +19,11 @@ spring:
 # 查看当前项目中已启用和未启用的自动配置的报告。
 debug: true
 
+#类型安全的配置（基于properties） 练习
+author:
+  name:Jack
+  age:20
+
 #AutoConfigure试验
 hello:
   msg:wuqingyi

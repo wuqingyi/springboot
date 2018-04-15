@@ -1,8 +1,10 @@
 package com.wqy.springboot.controllers;
 
 import com.wqy.springboot.entities.Person;
+import com.wqy.springboot.propertityBeans.AuthorProperties;
 import com.wqy.starterhello.services.HelloService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,11 +19,14 @@ public class thymeleafController {
     @Autowired
     HelloService helloService;
 
+    @Autowired
+    AuthorProperties authorProperties;
+
     @RequestMapping("/thymeleaf")
     public String tf(Model model) {
         Person single = new Person(helloService.sayHello(), 11);
         List<Person> people = new ArrayList<Person>();
-        Person p1 = new Person("xx", 11);
+        Person p1 = new Person(authorProperties.getName(), (int) authorProperties.getAge());
         Person p2 = new Person("yy", 22);
         Person p3 = new Person("zz", 33);
         people.add(p1);
